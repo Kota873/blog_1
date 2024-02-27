@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary text-white">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color: aliceblue;" href="{% url 'post-list' %}">Dブログ0.0</a>
+        <h1>今日は{% now "Y年m月d日 H:i:s" %}</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form action="{% url 'search-post-list' %}" method="GET" class="d-flex me-2">
+            <input class="form-control me-2" type="text" name="query" placeholder="キーワードを入力" value="{{ query }}">
+            <input class="btn btn-outline-success" type="submit" value="検索" style="color: aliceblue; background-color: green;">
+        </form>
+    </div>
+    
+</nav>
